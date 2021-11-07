@@ -6,40 +6,71 @@
   font-weight: bold;
 }
 
+.collect-parts {
+  /* width: 50vw; */
+  /* height: 100vh; */
+  margin: 0 auto;
+  letter-spacing: -1px;
+}
 
+
+/* Start Header Part  */
+header {
+  display: flex;
+  justify-content: center;
+  /* margin-bottom: 70px; */
+  height: 20vh;
+  background-image: url(../image/d1389efb-2c58-4821-b42d-f8e36f30d9e1.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 20% 40%;
+  font-size: 28px;
+
+}
 
 header .head {
-  font-size: 35px;
-  margin-top: 30px;
-  margin-bottom: 190px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  /* width: 55%; */
+  /* font-size: 35px; */
 }
+/* End Header Part  */
 
-header .head .row {
-  justify-content: center;
-}
 
-.difination {
-  justify-content: center;
-}
-
+/* Start Welcom! Part  */
 .explain {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+  /* height: 20vh; */
 }
 
 .explain .welcome {
   margin-bottom: 25px;
   color: #B01414;
+  text-align: center;
 }
 
 .explain .usage {
   font-size: 30px;
   letter-spacing: -1px;
   text-align: center;
+}
+/* End Welcom! Part  */
+
+
+/* Start Table Part  */
+.cat-table {
+  /* height: 40vh; */
+  /* width: 50vw; */
+  /* margin: 0 auto; */
+  justify-content: center;
+}
+
+.main-table {
+  display: table;
 }
 
 .cat-table .table {
@@ -51,6 +82,7 @@ header .head .row {
   -moz-border-radius: 10px !important;
   -ms-border-radius: 10px !important;
   -o-border-radius: 10px !important;
+  margin: 0 auto;
 }
 
 .cat-table .table th:last-of-type ,
@@ -60,9 +92,18 @@ header .head .row {
 }
 
 .cat-table .table th ,
+.cat-table .table td:last-of-type {
+  padding: 15px 0 !important;
+}
+
+.cat-table .table thead {
+  padding: 20px 0;
+}
+
+.cat-table .table th ,
 .cat-table .table td {
-  padding: 30px 0;
-  font-size: 25px;
+  padding: 10px 0;
+  font-size: 20px;
 }
 
 .cat-table .table thead tr{
@@ -79,6 +120,7 @@ header .head .row {
   border: 2px solid #468541;
   padding: 3px 6px 7px;
   border-radius: 6px;
+  font-size: 16px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
@@ -98,6 +140,27 @@ header .head .row {
   border-color: #468541;
   outline: none;
 }
+/* End Table Part  */
+
+
+/* Start PDF Button */
+.export-pdf {
+  justify-content: center;
+}
+
+.export-pdf button {
+  margin: 2vw;
+  background-color: transparent;
+  padding: 12px;
+  /* font-size: 22px; */
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+/* Start PDF Button */
+
 
 /* -------- Start Popup ------  */
 .custom-model-main {
@@ -230,7 +293,7 @@ header .head .row {
 
 .items .adding .add {
   color: #2349D0;
-  font-size: 35px;
+  /* font-size: 35px; */
 }
 
 .items .input-ele .row {
@@ -239,6 +302,6 @@ header .head .row {
 }
 
 .items .input-ele label {
-  font-size: 35px;
+  /* font-size: 35px; */
 }
 /* -------- End Popup ------  */
