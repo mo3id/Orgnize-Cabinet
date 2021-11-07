@@ -5,7 +5,9 @@
   font-family: cursive;
   font-weight: bold;
 }
-
+body{
+  font-size: 26px !important;
+}
 .collect-parts {
   /* width: 50vw; */
   /* height: 100vh; */
@@ -16,14 +18,15 @@
 
 /* Start Header Part  */
 header {
-  display: flex;
+  /* display: flex; */
+  align-content: center;
   justify-content: center;
   /* margin-bottom: 70px; */
   height: 20vh;
   background-image: url(../image/d1389efb-2c58-4821-b42d-f8e36f30d9e1.jpg);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 20% 40%;
+  background-position: 25% 40%;
   font-size: 28px;
 
 }
@@ -152,7 +155,7 @@ header .head {
   margin: 2vw;
   background-color: transparent;
   padding: 12px;
-  /* font-size: 22px; */
+  font-size: 14px !important;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -209,7 +212,7 @@ header .head {
   vertical-align: middle;
   width: 100%;
   /* margin: 30px auto; */
-  max-width: 97%;
+  /* max-width: 97%; */
 }
 
 .custom-model-wrap {
@@ -236,8 +239,8 @@ header .head {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-  height: 80vh;
-  width: 90vw;
+  /* height: 70vh; */
+  /* width: 60vw; */
 
 }
 
