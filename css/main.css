@@ -23,7 +23,7 @@ header {
   justify-content: center;
   /* margin-bottom: 70px; */
   height: 20vh;
-  background-image: url(../image/d1389efb-2c58-4821-b42d-f8e36f30d9e1.jpg);
+  /* background-image: url(../image/d1389efb-2c58-4821-b42d-f8e36f30d9e1.jpg); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 25% 40%;
@@ -228,7 +228,7 @@ header .head {
   background-clip: padding-box;
   outline: 0;
   text-align: left;
-  padding: 20px;
+  padding: 20px 40px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -290,7 +290,7 @@ header .head {
 .items .adding {
   justify-content: center;
   align-items: center;
-  margin-bottom: 70px;
+  margin-bottom: 25px;
 
 }
 
