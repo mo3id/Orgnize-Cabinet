@@ -1,125 +1,106 @@
-// function togglePopup() {
-//   document.getElementById("popup-1").classList.toggle("active");
-// }
+function openModel(type) {
+  document.getElementById("modal-wrapper").innerHTML += getModal(type);
+}
 
-$(".Click-here").on("click", function () {
-  $(".custom-model-main").addClass("model-open");
-  let saveButton = $(".submit"),
-    that = $(this);
-  saveButton.click((e) => {
-    // e.preventDefault();
-    
-    let clotheNameInput = $(".clotheName").val(),
-      clotheColorInput = $(".clotheColor").val(),
-      newTask = `<span class="task-box">${clotheNameInput} _ ${clotheColorInput}</span>`;
+function closeModal() {
+  document.getElementById("modal-wrapper").innerHTML = "";
+}
 
-    that.parent().append(newTask).addClass("filled");
-    that.remove();
-    $(".clotheName").val('')
-    $(".clotheColor").val('')
-    console.log(clotheNameInput);
-    $(".custom-model-main").removeClass("model-open");
-  });
-  // document.querySelector(".Click-here").remove()
-  // saveData();
-  // return false;
-});
+function addItem(type, event) {
+  event.preventDefault();
 
-$(".close-btn, .bg-overlay").click(function () {
-  $(".custom-model-main").removeClass("model-open");
-});
+  const clothName = document.getElementById("clothName");
+  const clothColor = document.getElementById("clothColor");
+  const clothType = document.getElementById("clothType");
 
-let itemButton = `<button class="Click-here">+ Item</button>`;
+  const targetCategory = document.getElementById(clothType.value);
+  const table = targetCategory.getElementsByClassName(type)[0];
 
-saveData = () => {
-  let clotheNameInput = document.querySelector(".clotheName"),
-    clotheColorInput = document.querySelector(".clotheColor"),
-    newTask = `${clotheNameInput.value} _ ${clotheColorInput.value}`;
-  alert(newTask);
-  document.querySelector(".Click-here1").remove();
-  // $(".Click-here").map((item) => item.remove() );
-};
-// let answerDiv = `<span></span>`
+  table.innerHTML += `<span class="task-box">${clothName.value} _ ${clothColor.value}</span><br />`;
 
-// chooseClothes = () => {
-//   $(".custom-model-main").addClass('model-open');
-// }
+  document.getElementById("modal-wrapper").innerHTML = "";
+}
 
-// let clotheNameInput = document.querySelector(".custom-model-main .clotheName"),
-//   clotheColorInput = document.querySelector(".custom-model-main .clotheColor"),
-// plusButton = document.querySelector(".add-task .plus"),
-// tasksContent = document.querySelector(".tasks-content"),
-// tasksCount = document.querySelector(".tasks-count span"),
-// tasksCompleted = document.querySelector(".tasks-completed span");
+function downloadPdf() {
+  $("#organizer").tableHTMLExport({ type: "pdf", filename: "organizer.pdf" });
+}
 
-// focus on input field
-// window.onload = function () {
-//     taskInput.focus();
-// }
+function getModal(type) {
+  return `<div class="custom-model-main model-open">
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <div class="custom-model-inner">
+        <div class="custom-model-wrap">
+          <div class="pop-up-content-wrap">
+            <div class="items">
+              <div class="adding row">
+                <div class="add col-6">Add Item</div>
+                <div class="close-btn col-6" onclick="closeModal()">×</div>
+              </div>
+              <form onsubmit="addItem( '  ${type}  ', event)">
+                <div class="input-ele">
+                  <div class="mb-3 row">
+                    <label
+                      for="staticEmail"
+                      class="col-3 col-form-label"
+                      >Clothe Name:</label
+                    >
+                    <div class="col-8">
+                      <input
+                        id="clothName"
+                        type="text"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      for="inputPassword"
+                      class="col-3 col-form-label"
+                      >Clothe Color:</label
+                    >
+                    <div class="col-8">
+                      <input
+                        id="clothColor"
+                        type="text"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      class="col-3 col-form-label"
+                      >Cloth type:</label
+                    >
+                    <div class="col-8">
+                      <select
+                        id="clothType"
+                        class="form-control"
+                      >
+                      <option value="workware">Workware</option>
+                      <option value="home">Home</option>
+                      <option value="sport">Sport</option>
+                      <option value="partyware">Partyware</option>
+                      </select>
 
-// plusButton.onclick = function () {
-//   let taskBox = document.getElementsByClassName("task-box");
-
-//   if (taskInput.value === "" || taskInput.value === null) {
-//     console.log("no value");
-//   } else {
-//     let noTasks = document.querySelector(".no-tasks-message");
-
-//     if (document.body.contains(noTasks)) {
-//       noTasks.remove();
-//     }
-
-//     let newTask = `<span class="task-box">
-//                             ${taskInput.value}
-//                             <span class="delete">delete</span>
-//                         </span>`;
-
-//     tasksContent.innerHTML += newTask;
-
-//     taskInput.value = "";
-
-//     taskInput.focus();
-
-//     let allTasks = document.getElementsByClassName("task-box");
-
-//     tasksCount.textContent = allTasks.length;
-//   }
-//   // allDeletes = document.getElementsByClassName("delete");
-//   // console.log(allDeletes);
-//   // for ( let c = 0; c < allDeletes.length; c++ ) {
-//   //     allDeletes[c].addEventListener("click", e => {
-//   //         console.log(e);
-//   //         e.target.parentElement.remove();
-//   //     });
-//   // }
-// };
-
-// document.addEventListener("click", function (e) {
-//   // remove task
-//   if (e.target.className == "delete") {
-//     e.target.parentElement.remove();
-
-//     let allTasks = document.getElementsByClassName("task-box");
-
-//     tasksCount.textContent = allTasks.length;
-
-//     allFinished = document.getElementsByClassName("finished");
-
-//     tasksCompleted.textContent = allFinished.length;
-
-//     if (allTasks.length == 0) {
-//       let noTask = `<span class="no-tasks-message">No Tasks To Show</span>`;
-
-//       tasksContent.innerHTML = noTask;
-//     }
-//   }
-
-//   // Finish Task
-//   if (e.target.classList.contains("task-box")) {
-//     e.target.classList.toggle("finished");
-
-//     allFinished = document.getElementsByClassName("finished");
-
-//     tasksCompleted.textContent = allFinished.length;
-//   }
-// });
+                    </div>
+                  </div>
+                </div>
+                <button
+                  id="saveData"
+                  class="btn btn-primary text-center submit"
+                >
+                  Save
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-overlay"></div>
+</div>`;
+}

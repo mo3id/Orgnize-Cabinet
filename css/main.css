@@ -5,7 +5,7 @@
   font-family: cursive;
   font-weight: bold;
 }
-body{
+body {
   font-size: 26px !important;
 }
 .collect-parts {
@@ -14,7 +14,6 @@ body{
   margin: 0 auto;
   letter-spacing: -1px;
 }
-
 
 /* Start Header Part  */
 header {
@@ -28,7 +27,6 @@ header {
   background-repeat: no-repeat;
   background-position: 25% 40%;
   font-size: 28px;
-
 }
 
 header .head {
@@ -38,7 +36,6 @@ header .head {
   /* font-size: 35px; */
 }
 /* End Header Part  */
-
 
 /* Start Welcom! Part  */
 .explain {
@@ -52,7 +49,7 @@ header .head {
 
 .explain .welcome {
   margin-bottom: 25px;
-  color: #B01414;
+  color: #b01414;
   text-align: center;
 }
 
@@ -62,7 +59,6 @@ header .head {
   text-align: center;
 }
 /* End Welcom! Part  */
-
 
 /* Start Table Part  */
 .cat-table {
@@ -88,13 +84,13 @@ header .head {
   margin: 0 auto;
 }
 
-.cat-table .table th:last-of-type ,
+.cat-table .table th:last-of-type,
 .cat-table .table td:last-of-type {
   border-left: 1px solid #000;
-  color: #2349D0;
+  color: #2349d0;
 }
 
-.cat-table .table th ,
+.cat-table .table th,
 .cat-table .table td:last-of-type {
   padding: 15px 0 !important;
 }
@@ -103,21 +99,21 @@ header .head {
   padding: 20px 0;
 }
 
-.cat-table .table th ,
+.cat-table .table th,
 .cat-table .table td {
   padding: 10px 0;
   font-size: 20px;
 }
 
-.cat-table .table thead tr{
-  color: #2349D0;
+.cat-table .table thead tr {
+  color: #2349d0;
 }
 
-.cat-table .table thead ,
+.cat-table .table thead,
 .cat-table .table tbody {
-  color: #E2761A;
+  color: #e2761a;
 }
-.cat-table .table tbody td button {
+.cat-table th button {
   color: #468541;
   background-color: #fff;
   border: 2px solid #468541;
@@ -130,21 +126,20 @@ header .head {
   -o-border-radius: 6px;
 }
 
-.cat-table .table tbody td button:active {
+.cat-table th button:active {
   border-color: #468541;
 }
 
-.cat-table .table tbody td button:focus {
+.cat-table th button:focus {
   border-color: #468541;
   outline: none;
 }
 
-.cat-table .table tbody td button:focus-visible {
+.cat-table th button:focus-visible {
   border-color: #468541;
   outline: none;
 }
 /* End Table Part  */
-
 
 /* Start PDF Button */
 .export-pdf {
@@ -164,7 +159,6 @@ header .head {
 }
 /* Start PDF Button */
 
-
 /* -------- Start Popup ------  */
 .custom-model-main {
   text-align: center;
@@ -183,7 +177,7 @@ header .head {
   z-index: -1;
   overflow-x: hidden;
   overflow-y: auto;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
@@ -196,6 +190,7 @@ header .head {
   z-index: 99999;
   opacity: 1;
   overflow: hidden;
+  display: flex;
 }
 
 .custom-model-inner {
@@ -241,7 +236,6 @@ header .head {
   -o-border-radius: 20px;
   /* height: 70vh; */
   /* width: 60vw; */
-
 }
 
 .model-open .custom-model-inner {
@@ -291,11 +285,10 @@ header .head {
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
-
 }
 
 .items .adding .add {
-  color: #2349D0;
+  color: #2349d0;
   /* font-size: 35px; */
 }
 
@@ -304,7 +297,8 @@ header .head {
   justify-content: flex-start;
 }
 
-/* .items .input-ele label {
-  /* font-size: 35px; */
-} */
-/* -------- End Popup ------  */
+.table table .task-box {
+  border-bottom: 2px solid #919191;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+}
