@@ -1,3 +1,4 @@
+$(".loader").fadeOut("slow");
 function openModel(type) {
   document.getElementById("modal-wrapper").innerHTML += getModal(type);
 }
